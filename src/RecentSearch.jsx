@@ -1,7 +1,23 @@
-function RecentSearch({ recentHistory, setQuestion, setSelectedHistory , setRecentHistory}) {
+function RecentSearch({ recentHistory, setQuestion, setSelectedHistory , setRecentHistory, question}) {
   
   // Function to clear the recent search history
   // and update the state accordingly
+
+
+    if(question ) {
+      if(localStorage.getItem('history')){
+      let history = JSON.parse(localStorage.getItem('history'))
+      history = [question, ...history]
+      localStorage.setItem('history',JSON.stringify(history))
+      setRecentHistory(history)
+    } else {
+      localStorage.setItem('history',JSON.stringify([question]))
+      setRecentHistory([question])
+    }
+    }
+
+
+
   const clearHistory = () => {
     localStorage.clear("history");
     setRecentHistory([]);

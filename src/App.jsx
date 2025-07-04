@@ -22,17 +22,6 @@ function App() {
       return false;
     } 
 
-    if(question ) {
-      if(localStorage.getItem('history')){
-      let history = JSON.parse(localStorage.getItem('history'))
-      history = [question, ...history]
-      localStorage.setItem('history',JSON.stringify(history))
-      setRecentHistory(history)
-    } else {
-      localStorage.setItem('history',JSON.stringify([question]))
-      setRecentHistory([question])
-    }
-    }
 
     const payloadData = question ? question : selectedHistory
 
@@ -141,7 +130,6 @@ function App() {
       </select>
 
       <RecentSearch recentHistory={recentHistory} setRecentHistory={setRecentHistory} setSelectedHistory={setSelectedHistory} setQuestion={setQuestion} />
-
 
       <div className="col-span-4 p-10">
 
