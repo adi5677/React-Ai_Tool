@@ -9,7 +9,8 @@
 ✅ Works with Vite, Create React App, Next.js, and more.
 
 ## ✨ Preview
-<div align="center"> <img src="https://via.placeholder.com/600x300?text=Demo+Screenshot" alt="Demo Screenshot" /> </div>
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/db7a642c-cfe3-438f-a253-2633493da021" />
+
 🛠 Installation
 bash
 Copy
